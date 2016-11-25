@@ -25,6 +25,7 @@ while True:
     x, y = struct.unpack("bb", buf[1:]);
     print("L:%d, M: %d, R: %d, x: %d, y: %d\n" % (bLeft, bMiddle, bRight, x, y));
 
-    socket.send_string("10001 " + str(x) + ' ' + str(y))
+    socket.send_string("10001 " + str(x) + ' ' + str(y) + ' ' + str(bLeft) + ' ' +$
+
 
 file.close();
