@@ -31,4 +31,4 @@ while True:
     topicfilter, x, y = string.split()
     print("x: " + x + ", y: " + y)
     xM,yM = m.position()
-    m.move(xM + int(x), yM + int(y))
+    m.move(xM + int(x), yM - int(y))
