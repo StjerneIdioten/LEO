@@ -28,7 +28,13 @@ socket.setsockopt_string(zmq.SUBSCRIBE, topicfilter)
 
 while True:
     string = socket.recv_string()
-    topicfilter, x, y = string.split()
-    print("x: " + x + ", y: " + y)
+    topicfilter, x, y, mL = string.split()
+    print("x: " + x + ", y: " + y + ", mLeft: " + mL)
     xM,yM = m.position()
     m.move(xM + int(x), yM - int(y))
+    if mL == 1:
+	mL=True
+    else:
+	mL=False
+    if mL:
+	m.click(xM + int(x), yM - int(y), 1)
