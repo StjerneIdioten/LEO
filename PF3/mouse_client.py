@@ -32,9 +32,9 @@ while True:
     print("x: " + x + ", y: " + y + ", mLeft: " + mL)
     xM,yM = m.position()
     m.move(xM + int(x), yM - int(y))
-    if mL == 1:
-	mL=True
+    if mL == "1":
+        mL=True
     else:
-	mL=False
+        mL=False
     if mL:
-	m.click(xM + int(x), yM - int(y), 1)
+        m.click(xM + int(x), yM - int(y), 1)
